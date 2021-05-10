@@ -1,0 +1,302 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-sizing: border-box;
+}
+
+/*======================== SCROLL BAR ======================== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #444;
+}
+
+/* ======================================================== */
+
+/* ========================= HEADING =======================*/
+header {
+  display: flex;
+  position: sticky;
+  top: 0;
+  height: 30px;
+  width: 100%;
+  box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.2);
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  background-color: #fff;
+  padding: 15px 0;
+}
+
+.inner-header {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* +++++++++++++++++++++++++++++++++++++++++++++ */
+.inner-header h1{
+  display: inline;
+  /* font-family: 'Fredoka One', cursive; */
+  /* color: #d60973; */
+  letter-spacing: 2px;
+}
+
+/* .inner-header .add-cam {
+  margin-right: auto;
+} */
+
+/* ++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+.inner-header .GTJ {
+  margin-left: auto;
+}
+
+/* ======================== MAIN ========================= */
+main {
+  max-width: 760px;
+  margin: 10px auto;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.stories {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  border: 1px solid rgb(158, 158, 158);
+  padding: 0.1875em;
+  height: 6.8em;
+  overflow-x: auto;
+  scrollbar-color: #818181 #f0f0f0;
+  scrollbar-width: thin;
+}
+
+.stories::-webkit-scrollbar {
+  height: 0.4375em;
+}
+
+.stories::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+  width: 0.5em;
+}
+
+.stories::-webkit-scrollbar-thumb {
+  background: #818181;
+  border-radius: 5px;
+}
+
+.story {
+  /* border: 1px solid #000; */
+  width: 100px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.story img {
+  width: 60px;
+  height: 60px;
+  border: 3px solid #d60973;
+  border-radius: 50%;
+}
+
+/* --- User's post --- */
+.post {
+  width: 97%;
+  height: auto;
+  border-radius: 4px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.post:not(:first-child) {
+  margin-top: 30px;
+}
+
+.post img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  /* box-shadow: 0 3px 5px 0 #ff91ad; */
+  box-shadow: 0 6px 10px 0 #05004450;
+}
+
+.before {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 50px;
+}
+
+.user-icon {
+  height: 35px;
+  width: 35px;
+  border: 1px solid #a5a5a5;
+  border-radius: 50%;
+  margin: 0 10px;
+  text-align: center;
+}
+
+.user-icon img {
+  width: 30px;
+}
+
+.during {
+  position: relative;
+}
+.during-after {
+  position: absolute;
+  left: 0;
+  bottom: 3px;
+  border-radius: 0 0 10px 10px;
+  width: 100%;
+  background-color: #00000081;
+  color: #fff;
+}
+
+.during-after span {
+  width: auto;
+  margin-left: 5px;
+  font-size: 14px;
+}
+
+.during-after span.name {
+  font-weight: bold;
+}
+
+.during-after:last-child {
+  padding-bottom: 3px;
+}
+
+.after {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.after p {
+  margin-left: 10px;
+}
+.after div {
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.like-icon {
+  fill: #c7c7c7;
+  transition: 0.3s linear;
+}
+
+.like:checked + .like-icon {
+  fill: #ff0000;
+}
+
+.like-icon:active {
+  fill: #fff;
+}
+
+.like {
+  display: none;
+}
+
+.comment{
+  fill: #c7c7c7;
+}
+
+.saving {
+  margin-left: 15px;
+}
+
+.save {
+  fill: #c7c7c7;
+}
+
+.save:active {
+  fill: #a3a3a3;
+}
+
+
+/* ================== SITE NAVIGATIONS =====================*/
+.nav-big {
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  height: 25px;
+  padding: 15px 0;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 -3px 3px -2px rgba(0, 0, 0, 0.2);
+}
+
+.nav-small {
+  display: flex;
+  width: 760px;
+  justify-content: space-evenly;
+}
+
+.navigation-link {
+  width: 30%;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.navigation-link svg {
+  padding: 12px 0;
+}
+
+.ripple {
+  background-position: center;
+  transition: background 0.9s;
+  background: #ffffff radial-gradient(circle, transparent 1%, #ffffff 1%)
+    center/15000%;
+}
+
+.ripple:active {
+  background-color: #bebebe;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+/* MY DP */
+.special {
+  background: url("images (4).jpeg");
+  background-position: center;
+  background-size: cover;
+}
+
+.regular {
+  background: url("user.png");
+  background-position: center;
+  background-size: cover;
+}
+
+
+#xdf{
+  font-size: 30px;
+  /* font-family: 'Fredoka One', cursive; */
+  font-family: 'Dancing Script', cursive;
+  /* font-family: 'Pacifico', cursive; */
+  color: #000;
+  /* color: #d60973; */
+  font-weight: bold;
+} 
