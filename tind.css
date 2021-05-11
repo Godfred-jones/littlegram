@@ -17,7 +17,6 @@ body {
 ::-webkit-scrollbar-thumb {
   background: #444;
 }
-
 /* ======================================================== */
 
 /* ========================= HEADING =======================*/
@@ -157,6 +156,10 @@ a:active {
 
 .user-icon img {
   width: 30px;
+}
+
+.actions{
+  margin-left: auto;
 }
 
 .during {
@@ -299,4 +302,27 @@ a:active {
   /* color: #000; */
   color: #d60973;
   font-weight: bold;
-} 
+}
+
+.searchmain{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gitem{
+  height: 200px;
+  border:1px solid #000;
+  width: 190px;
+  flex-grow: 1;
+  display: flex;
+  align-content: stretch;
+  align-items: stretch;
+}
+
+.gitem img{
+  width: 150;
+  height: 200;
+  object-fit: cover;
+  object-position: center;
+  flex: 1;
+}
